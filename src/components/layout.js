@@ -22,13 +22,10 @@ const Layout = ({ children }) => {
     <>
       <Navbar />
       <Header />
-      <main>{children}</main>
-      <footer>
-        Made with JS and Love
-      </footer>
     </>
   )
 }
+//<main>{children}</main>
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

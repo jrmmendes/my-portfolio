@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import DownArrow from '../images/down-arrow.svg'
+import BannerBackground from '../images/banner-image.jpg';
 
 const HeaderWrapper = styled.header`
 display: flex;
@@ -9,7 +9,7 @@ align-items: center;
 justify-content: center;
 flex-direction: column;
 height: 100vh;
-background: #262626;
+background: #262626 url(${BannerBackground});
 padding-top: 3rem;
 padding-left: 5rem;
 padding-right: 5rem;
@@ -60,7 +60,6 @@ stroke: white;
 
 export const Header = () => (
   <HeaderWrapper>
-    
     <Presentation>
       <h1>
         Hello, I’m Júnior. 
