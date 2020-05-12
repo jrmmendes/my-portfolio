@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import DownArrow from '../images/down-arrow.svg'
 
 const HeaderWrapper = styled.header`
 display: flex;
@@ -15,15 +16,21 @@ padding-right: 5rem;
 box-sizing: border-box;
 `
 
-const Presentation = styled.h1`
-color: white;
-font-weight: 300;
-font-size: 2.5em;
+const Presentation = styled.hgroup`
 text-align: center;
 width: 40%;
-p {
+h1, h2, h3 {
+  color: white;
+  font-weight: 300;
+  font-size: 2.5em;
   margin: 0;
 }
+
+h3 {
+  font-size: 1em;
+  margin-top: 1.3em;
+}
+
 strong {
   font-weight: 300;
   display: inline-flex;
@@ -34,16 +41,42 @@ strong {
 }
 `
 
+const DownArrowLink = styled(Link)`
+display: inline-flex;
+justify-content: center;
+align-items: center;
+width: 3em;
+height: 3em;
+border: 0.05em solid white;
+border-radius: 50%;
+transition: all 200ms ease-in-out;
+stroke: white;
+&:hover {
+  stroke: black;
+  background: white;
+  transition: all 200ms ease-in-out;
+}
+`
+
 export const Header = () => (
   <HeaderWrapper>
+    
     <Presentation>
-      <p>
+      <h1>
         Hello, I’m Júnior. 
-      </p>
-      <p>
+      </h1>
+      <h2>
         My job is to make your business and software <strong>reliable</strong>
-      </p>
+      </h2>
+      <h3>
+        Please allow me to introduce myself.
+      </h3>
+      
     </Presentation>
-    <Link to="/#"> Next </Link>
+    <DownArrowLink to="/#">
+      <svg width="20" height="11" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 1L10 10L19 1"/>
+      </svg>
+    </DownArrowLink>
   </HeaderWrapper>
 )
