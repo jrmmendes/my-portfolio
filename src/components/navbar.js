@@ -28,7 +28,7 @@ padding-left: 5rem;
 padding-right: 5rem;
 align-items: center;
 justify-content: space-between;
-background-color: rgba(0,0,0,0.5);
+background-color: #262626;
 width: 100%;
 clip-path: polygon(0 0, 100% 0, 100% 88%, 0% 100%);
 position: fixed;
