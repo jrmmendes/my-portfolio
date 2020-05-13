@@ -1,15 +1,17 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import BannerBackground from '../images/banner-image.jpg';
+import VideoBackground from '../videos/coding.mp4';
 
 const HeaderWrapper = styled.header`
+position: relative;
+overflow: hidden;
 display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
 height: 100vh;
-background: #262626 url(${BannerBackground});
+background: rgba(0,0,0, 0.8);
 padding-top: 3rem;
 padding-left: 5rem;
 padding-right: 5rem;
@@ -17,6 +19,7 @@ box-sizing: border-box;
 `
 
 const Presentation = styled.hgroup`
+overflow: hidden;
 text-align: center;
 width: 40%;
 h1, h2, h3 {
@@ -60,6 +63,21 @@ stroke: white;
 
 export const Header = () => (
   <HeaderWrapper>
+    <video
+      loop
+      autoPlay
+      muted
+      src={VideoBackground}
+      style={{
+        pointerEvents: 'none',
+        width: '100%',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        margin: 0,
+        zIndex: '-1',
+      }}
+    ></video>
     <Presentation>
       <h1>
         Hello, I’m Júnior. 

@@ -23,12 +23,13 @@ margin-right: ${linkMargin}em;
 
 const NavbarWrapper = styled.div`
 display: flex;
+z-index: 10;
 padding: 1.2em;
 padding-left: 5rem;
 padding-right: 5rem;
 align-items: center;
 justify-content: space-between;
-background-color: #262626;
+background-color: #26262600;
 width: 100%;
 clip-path: polygon(0 0, 100% 0, 100% 88%, 0% 100%);
 position: fixed;
