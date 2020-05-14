@@ -6,18 +6,16 @@ import Video from '../videos/coding.mp4'
 const breakpoint = '1200px';
 
 const HeaderWrapper = styled.header`
-position: relative;
-overflow: hidden;
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-background: rgba(0,0,0, 0.8);
-padding-top: 3rem;
-padding-left: 5rem;
-padding-right: 5rem;
-box-sizing: border-box;
-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgba(0,0,0, 0.8);
+  padding: 3rem 0 5rem;
+  box-sizing: border-box;
+  height: 100vh;
 `
 
 const Presentation = styled.hgroup`
