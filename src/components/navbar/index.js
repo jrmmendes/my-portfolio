@@ -27,6 +27,11 @@ const Logo = styled.img`
   height: 2.5rem;
 `
 
+const Hamburguer = styled.button`
+@media (min-width: 900px) {
+  display: none;
+}
+`
 
 export default () => {
   return (
@@ -37,7 +42,7 @@ export default () => {
 
       <SiteNavigation />
       <SocialNetworks />
-      <button> M </button>
+      <Hamburguer> M </Hamburguer>
     </Navbar>
   )
 }
