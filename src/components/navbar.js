@@ -59,6 +59,7 @@ export const Navbar = () => {
       <Link to="/">
         <img src={Logo} alt="logo" style={{
           margin: 0,
+          height: '2em',
         }}/>
       </Link>
       <NavLinks>
