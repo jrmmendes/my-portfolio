@@ -1,7 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import VideoBackground from '../videos/coding.mp4';
+import Video from '../videos/coding.mp4'
+
+const breakpoint = '1200px';
 
 const HeaderWrapper = styled.header`
 position: relative;
@@ -10,23 +12,26 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
-height: 100vh;
 background: rgba(0,0,0, 0.8);
 padding-top: 3rem;
 padding-left: 5rem;
 padding-right: 5rem;
 box-sizing: border-box;
+height: 100vh;
 `
 
 const Presentation = styled.hgroup`
 overflow: hidden;
 text-align: center;
-width: 40%;
+width: 20rem;
 h1, h2, h3 {
   color: white;
   font-weight: 300;
   font-size: 2.5em;
   margin: 0;
+  @media (max-width: 400px) {
+    font-size: 2.3em;
+  }
 }
 
 h3 {
@@ -48,8 +53,8 @@ const DownArrowLink = styled(Link)`
 display: inline-flex;
 justify-content: center;
 align-items: center;
-width: 3em;
-height: 3em;
+width: 3rem;
+height: 3rem;
 border: 0.05em solid white;
 border-radius: 50%;
 transition: all 200ms ease-in-out;
@@ -61,23 +66,31 @@ stroke: white;
 }
 `
 
+const VideoBackground = styled.video`
+pointer-events: none;
+position: absolute;
+top: 0;
+right: 0;
+margin: 0;
+z-index: -1;
+align-self: center;
+
+@media (max-width: ${breakpoint}) {
+  height: 100%;
+}
+@media (min-width: ${breakpoint}) {
+  width: 100%;
+}
+`
+
 export const Header = () => (
   <HeaderWrapper>
-    <video
+    <VideoBackground
       loop
       autoPlay
       muted
-      src={VideoBackground}
-      style={{
-        pointerEvents: 'none',
-        width: '100%',
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        margin: 0,
-        zIndex: '-1',
-      }}
-    ></video>
+      src={Video}
+    ></VideoBackground>
     <Presentation>
       <h1>
         Hello, I’m Júnior. 
