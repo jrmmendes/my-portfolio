@@ -33,7 +33,7 @@ export default () => {
       </Network>
 
       <Network
-        href="https://twitter.com/jrmmendes"
+        href="https://twitter.com/dotmendes"
         target="_new">
         <FontAwesomeIcon icon={faTwitter}/>
       </Network>
