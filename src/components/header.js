@@ -21,6 +21,7 @@ const HeaderWrapper = styled.header`
 const Presentation = styled.hgroup`
 overflow: hidden;
 text-align: center;
+padding-top: 5rem;
 width: 20rem;
 h1, h2, h3 {
   color: white;
